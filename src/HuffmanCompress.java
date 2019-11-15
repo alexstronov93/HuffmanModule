@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 public class HuffmanCompress {
-    protected static void CompressionText(String pathToFile) throws Exception {
+    protected static void compressionText(String pathToFile) throws Exception {
         String string = readingDataTextFromInputFile(pathToFile);
         Map<String, Integer> symbolFrequency = buildSymbolFrequencyTable(string);
         Map<String, Node> symbolHuffmanTree = buildHuffmanTree(symbolFrequency);
