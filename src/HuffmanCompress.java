@@ -15,7 +15,7 @@ public class HuffmanCompress {
         File out = new File(pathToFile);
         String nameFile = out.getName();
 
-        try (FileOutputStream encodingText = new FileOutputStream("./src/files/" + nameFile + ".cmp")) {
+        try (FileOutputStream encodingText = new FileOutputStream(nameFile + ".cmp")) {
 
             byte[] buffer = encodedString.toString().getBytes();
 
