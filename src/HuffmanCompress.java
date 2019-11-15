@@ -6,7 +6,7 @@ public class HuffmanCompress {
         String string = readingDataTextFromInputFile(pathToFile);
         Map<String, Integer> symbolFrequency = buildSymbolFrequencyTable(string);
         Map<String, Node> symbolHuffmanTree = buildHuffmanTree(symbolFrequency);
-        StringBuffer encodedString = new StringBuffer();
+        StringBuilder encodedString = new StringBuilder();
         for (int i = 0; i < string.length(); i++) {
             String symbol = "" + string.charAt(i);
             encodedString.append(symbolHuffmanTree.get(symbol).code);
